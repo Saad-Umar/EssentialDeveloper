@@ -13,6 +13,7 @@
 		0FD9C5CE2A2225D600C5F270 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FD9C5CD2A2225D600C5F270 /* Preview Assets.xcassets */; };
 		0FD9C5D82A2225D600C5F270 /* ProperDependencyInjectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD9C5D72A2225D600C5F270 /* ProperDependencyInjectionTests.swift */; };
 		0FD9C5F12A2225FD00C5F270 /* RemoteFeedLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD9C5F02A2225FD00C5F270 /* RemoteFeedLoaderTests.swift */; };
+		0FD9C5F42A2247D600C5F270 /* RemoteFeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD9C5F32A2247D600C5F270 /* RemoteFeedLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +38,7 @@
 		0FD9C5E12A2225D600C5F270 /* ProperDependencyInjectionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProperDependencyInjectionUITests.swift; sourceTree = "<group>"; };
 		0FD9C5E32A2225D600C5F270 /* ProperDependencyInjectionUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProperDependencyInjectionUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		0FD9C5F02A2225FD00C5F270 /* RemoteFeedLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedLoaderTests.swift; sourceTree = "<group>"; };
+		0FD9C5F32A2247D600C5F270 /* RemoteFeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		0FD9C5C42A2225D500C5F270 /* ProperDependencyInjection */ = {
 			isa = PBXGroup;
 			children = (
+				0FD9C5F22A2247B500C5F270 /* Feed API */,
 				0FD9C5C52A2225D500C5F270 /* ProperDependencyInjectionApp.swift */,
 				0FD9C5C72A2225D500C5F270 /* ContentView.swift */,
 				0FD9C5C92A2225D600C5F270 /* Assets.xcassets */,
@@ -112,6 +115,14 @@
 				0FD9C5E32A2225D600C5F270 /* ProperDependencyInjectionUITestsLaunchTests.swift */,
 			);
 			path = ProperDependencyInjectionUITests;
+			sourceTree = "<group>";
+		};
+		0FD9C5F22A2247B500C5F270 /* Feed API */ = {
+			isa = PBXGroup;
+			children = (
+				0FD9C5F32A2247D600C5F270 /* RemoteFeedLoader.swift */,
+			);
+			path = "Feed API";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,6 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0FD9C5C82A2225D500C5F270 /* ContentView.swift in Sources */,
+				0FD9C5F42A2247D600C5F270 /* RemoteFeedLoader.swift in Sources */,
 				0FD9C5C62A2225D500C5F270 /* ProperDependencyInjectionApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
