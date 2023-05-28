@@ -10,17 +10,6 @@ import XCTest
 import ProperDependencyInjection
 
 final class RemoteFeedLoaderTests: XCTestCase {
-    private class HTTPClientSpy: HTTPClient {
-        var requestedURLs = [URL]()
-        var error: Error?
-        
-        func get(from url: URL, completion: @escaping (Error)->Void) {
-            if let error = error {
-                completion(error)
-            }
-            self.requestedURLs.append(url)
-        }
-    }
 
     func test_init_doesNotRequestDataFromURL() {
         let (_,client) = makeSUT()
@@ -44,10 +33,12 @@ final class RemoteFeedLoaderTests: XCTestCase {
 
     func test_load_deliversErrorOnClientError() {
         let (sut,client) = makeSUT()
+        
         var capturedErrors = [RemoteFeedLoader.Error]()
-        client.error = NSError(domain: "Test", code: 0)
         
         sut.load { capturedErrors.append($0) }
+        let clientError = NSError(domain: "Test", code: 0)
+        client.complete(with: clientError)
         
         XCTAssertEqual(capturedErrors,[.connectivity])
     }
@@ -57,6 +48,21 @@ final class RemoteFeedLoaderTests: XCTestCase {
         let client = HTTPClientSpy()
         let sut = RemoteFeedLoader(url: url, client: client)
         return (sut, client)
+    }
+    
+    private class HTTPClientSpy: HTTPClient {
+        private var messages = [(url:URL,completion:(Error)->Void)]()
+        var requestedURLs: [URL] {
+            messages.map { $0.url }
+    }
+        
+        func get(from url: URL, completion: @escaping (Error)->Void) {
+            self.messages.append((url, completion))
+        }
+        
+        func complete(with error: Error, at index: Int = 0) {
+            messages[index].completion(error)
+        }
     }
 }
 
