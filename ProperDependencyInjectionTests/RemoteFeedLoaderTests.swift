@@ -59,14 +59,12 @@ final class RemoteFeedLoaderTests: XCTestCase {
         }
         
     }
-    
-    //MARK: - Helpers
-    
-    private func makeSUT(url:URL = URL(string: "www.my-url-2.com")!) -> (RemoteFeedLoader,HTTPClientSpy) {
-        let client = HTTPClientSpy()
-        let sut = RemoteFeedLoader(url: url, client: client)
-        return (sut, client)
-    }
+   
+}
+
+
+extension RemoteFeedLoaderTests {
+    //MARK: - SPY
     
     private class HTTPClientSpy: HTTPClient {
         private var messages = [(url:URL,completion:(HTTPClientResult)->Void)]()
@@ -90,6 +88,13 @@ final class RemoteFeedLoaderTests: XCTestCase {
             
             messages[index].completion(.success(response))
         }
+    }
+    //MARK: - Helpers
+    
+    private func makeSUT(url:URL = URL(string: "www.my-url-2.com")!) -> (RemoteFeedLoader,HTTPClientSpy) {
+        let client = HTTPClientSpy()
+        let sut = RemoteFeedLoader(url: url, client: client)
+        return (sut, client)
     }
 }
 
