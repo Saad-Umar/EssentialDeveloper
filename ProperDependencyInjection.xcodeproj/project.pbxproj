@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0FCE7A8F2A2A022600D47579 /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCE7A8E2A2A022600D47579 /* FeedItem.swift */; };
 		0FD9C5C62A2225D500C5F270 /* ProperDependencyInjectionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD9C5C52A2225D500C5F270 /* ProperDependencyInjectionApp.swift */; };
 		0FD9C5C82A2225D500C5F270 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD9C5C72A2225D500C5F270 /* ContentView.swift */; };
 		0FD9C5CA2A2225D600C5F270 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FD9C5C92A2225D600C5F270 /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0FCE7A8E2A2A022600D47579 /* FeedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FeedItem.swift; path = "Feed API/FeedItem.swift"; sourceTree = "<group>"; };
 		0FD9C5C22A2225D500C5F270 /* ProperDependencyInjection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProperDependencyInjection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FD9C5C52A2225D500C5F270 /* ProperDependencyInjectionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProperDependencyInjectionApp.swift; sourceTree = "<group>"; };
 		0FD9C5C72A2225D500C5F270 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 		0FD9C5C42A2225D500C5F270 /* ProperDependencyInjection */ = {
 			isa = PBXGroup;
 			children = (
+				0FCE7A8E2A2A022600D47579 /* FeedItem.swift */,
 				0FD9C5F22A2247B500C5F270 /* Feed API */,
 				0FD9C5C52A2225D500C5F270 /* ProperDependencyInjectionApp.swift */,
 				0FD9C5C72A2225D500C5F270 /* ContentView.swift */,
@@ -225,6 +228,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FCE7A8F2A2A022600D47579 /* FeedItem.swift in Sources */,
 				0FD9C5C82A2225D500C5F270 /* ContentView.swift in Sources */,
 				0FD9C5F42A2247D600C5F270 /* RemoteFeedLoader.swift in Sources */,
 				0FD9C5C62A2225D500C5F270 /* ProperDependencyInjectionApp.swift in Sources */,
