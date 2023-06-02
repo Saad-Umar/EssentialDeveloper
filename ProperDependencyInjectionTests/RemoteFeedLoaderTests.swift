@@ -77,6 +77,12 @@ final class RemoteFeedLoaderTests: XCTestCase {
         
     }
     
+    func test_load_deliversItemsOn200HTTPResponseWithJSONItems() {
+        let (sut, client) = makeSUT()
+        
+        let item1 = FeedItem()
+    }
+    
 }
 
 
